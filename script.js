@@ -51,8 +51,7 @@ const fetchRepos = async () => {
                     repoTable.innerHTML += `
                         <tr>
                             <td style="text-align:center;">${index + 1}</td>
-                            <td>${repo.name}</td>
-                            <td style="text-align:center;"><a href="${repo.html_url}">Go To Repo</a></td>
+                            <td><a href="${repo.html_url}}">${repo.name}</a></td>
                         </tr>
                         `;
                 });
@@ -92,7 +91,7 @@ const fetchUniversities = async () => {
                 </tr>
                 `;
         }
-        
+
         xhr.onload = function () {
             universityTable.innerHTML = "";
             if (xhr.status === 200) {
@@ -110,8 +109,10 @@ const fetchUniversities = async () => {
                     universityTable.innerHTML += `
                         <tr>
                             <td style="text-align:center;">${index + 1}</td>
-                            <td>${university.name}</td>
-                            <td style="text-align:center;"><a href="${university.web_pages[0]}">Go To University</a></td>
+                            <td><a href="${university.web_pages.length > 0
+                            ? university.web_pages[0]
+                            : "#"
+                        }}">${university.name}</a></td>
                         </tr>
                         `;
                 });
