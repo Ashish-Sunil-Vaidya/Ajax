@@ -49,7 +49,7 @@
   border-radius: 5px;
   overflow: hidden;
   font-size: 1.2rem;
-  z-index: 9999;
+  z-index: 1;
 }
 
 #floater {
@@ -88,6 +88,7 @@
   .navbar {
     top: 60px;
   }
+  
 }
 
 @media only screen and (max-width: 468px) {
@@ -105,6 +106,7 @@
   border: 2px solid #ccc;
   border-radius: 5px;
   margin-bottom: 1rem;
+  z-index: 9999;
 }
 
 #username:focus,#country:focus{
