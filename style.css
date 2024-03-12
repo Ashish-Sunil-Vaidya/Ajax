@@ -107,6 +107,10 @@
   margin-bottom: 1rem;
 }
 
+#username:focus,#country:focus{
+  z-index: 9999;
+}
+
 
 table {
   width: 100%;
