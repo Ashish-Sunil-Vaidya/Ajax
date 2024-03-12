@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="navbar">
+            <div id="floater"></div>
+            <div class="nav-item active" onclick="setActiveTab('task-1')">Task 1</div>
+            <div class="nav-item" onclick="setActiveTab('task-2')">Task 2</div>
+        </div>
+        <div id="content">
+            <div id="task-1">
+                <h1>View Repositories</h1>
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Enter your username">
+                    <button onclick="fetchRepos()" class="submit-btn">Search</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <th style="width: 80px;text-align: center;">Sr. No</th>
+                            <th>Repository Name</th>
+                            <th style="width: 140px;">URL</th>
+                        </thead>
+                        <tbody id="repodata">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="task-2">
+                <h1>View Universities</h1>
+                <div class="form-group">
+                    <input type="text" id="country" placeholder="Enter your country">
+                    <button onclick="fetchUniversities()" class="submit-btn">Search</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <th style="width: 80px;text-align: center;">Sr. No</th>
+                            <th>University Name</th>
+                            <th style="width: 140px;">URL</th>
+                        </thead>
+                        <tbody id="universitydata">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/Ashish-Sunil-Vaidya">Ashish-Sunil-Vaidya</a>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
