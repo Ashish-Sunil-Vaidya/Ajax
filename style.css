@@ -38,13 +38,14 @@
   gap: 1rem;
 }
 .navbar {
-  width: 100px;
-  height: 100px;
+  width: 50%;
+  min-width: 100px;
+  height: 50px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 20px;
-  display: grid;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  display: flex;
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
@@ -54,8 +55,8 @@
 
 #floater {
   position: absolute;
-  width: 100%;
-  height: 50%;
+  width: 50%;
+  height: 100%;
   background-color: navy;
   transition: all 500ms;
   border-radius: 5px;
@@ -67,7 +68,7 @@
 }
 
 .nav-item {
-  width: 100%;
+  width: 50%;
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -92,8 +93,19 @@
 }
 
 @media only screen and (max-width: 468px) {
-  .task-1-form {
+
+  th{
+    font-size: 0.8rem;
+    padding: 5px !important;
+    
+  }
+
+  .table-container {
     min-width: 90%;
+  }
+
+  .navbar{
+    top: 10px;
   }
 }
 
@@ -123,6 +135,8 @@ table th {
   background-color: navy;
   border-radius: 5px;
   color: white;
+  text-align: center;
+  
 }
 
 td {

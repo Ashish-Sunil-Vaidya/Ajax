@@ -7,7 +7,7 @@ const tabs = [
 const setActiveTab = (tab) => {
     tabs.forEach((tabname, index) => {
         if (tabname === tab) {
-            document.getElementById('floater').style.transform = `translateY(${index * 100}%)`;
+            document.getElementById('floater').style.transform = `translateX(${index * 100}%)`;
             document.getElementsByClassName('nav-item')[index].classList.add("active");
             document.getElementById('content').style.transform = `translateY(-${index * 50}%)`;
         }
